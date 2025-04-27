@@ -1,0 +1,24 @@
+----- Resumo Azure OpenAI Playground -----
+
+O serviço Azure OpenAI Palyground é uma plataforma interativa para testar e integrar diversos modelos de LLMs para empresas e
+desenvolvedores utilizar. Nele podemos:
+- Enviar prompts;
+- Ajustar os parâmetros de geração de texto;
+- Verificar as respostas dos modelos.
+Muito utilizado para testar como os modelos respondem a diferentes comandos, refinar a escrita de melhores prompts além de
+configurar aplicações que depois podem ser usadas em APIs, chatbots, automações, etc.
+Sobre os modelos, é disponibiliza principalmente os modelos da OpenAI adaptados para rodar na infraestrutura da Microsoft, como:
+- GPT-3.5 (por exemplo, gpt-35-turbo);
+- GPT-4 (gpt-4, gpt-4-turbo);
+- DALL-E (geração de imagens a partir de texto);
+No prompt é inserido a instrução que o modelo deve seguir para responder as entradas, quanto melhor e mais claro seu prompt,
+melhor a resposta.
+Exemplos de prompts:
+- "Escreva uma descrição de produto para uma loja online de sapatos esportivos.";
+- "Traduza este texto do português para o inglês.";
+- "Sugira ideias de nomes para uma startup de energia renovável.".
+Podemos também definir a Temperatura e o Top-P.
+Temperatura: varia entre 0 e 1, responsável por controlar o nível de criatividade. Sendo próximo a 0 mais conservador e determinístico,
+e próximo a 1 mais criativo e aleatório.
+Top-P: varia entre 0 e 1, responsável por controlar o nível de diversidade na resposta. Sendo próximo a 0 a resposta utiliza palavras
+mais prováveis e mais direta, e próximo a 1 mais palavras aleatórias e menos direto, com uma resposta mais longa.
