@@ -1,0 +1,30 @@
+----- Resumo de chamadas de API com o Azure OpenAI e Integração com o Semantic Kernel -----
+
+A Azure OpenAI Service permite o uso dos modelos da OpenAI (como GPT-4, ChatGPT, Codex etc.) via endpoints REST, com autenticação
+baseada em chave ou Azure Active Directory (AAD).
+
+Passos principais:
+ - Criação de recurso no Azure: É necessário criar um recurso do tipo "Azure OpenAI" no portal.
+ - Model Deployment: Após o provisionamento, é preciso "implantar" (deploy) um modelo específico, como gpt-4, com um nome personalizado
+ (ex: "gpt-4-deployment").
+ - Chamada via REST API ou SDK:
+    Endpoint: https://<your-resource-name>.openai.azure.com/openai/deployments/<deployment-id>/chat/completions?api-version=2024-03-01
+    Autenticação: com api-key ou via Azure Identity.
+    Payload segue o formato da OpenAI API, com algumas diferenças no endpoint e parâmetros de autenticação.
+
+O Semantic Kernel (SK) é uma biblioteca da Microsoft (em C#, Python e Java) projetada para orquestrar modelos LLM com dados e
+funcionalidades tradicionais de software (como plugins, funções, memória e contexto).
+O objetivo é facilitar o uso de LLMs (como o da Azure OpenAI) com recursos como:
+
+ - Semantic Functions (prompts customizados)
+ - Native Functions (funções de código tradicionais)
+ - Memória (curto e longo prazo)
+ - Planner (planejamento automático de tarefas usando o modelo)
+
+O Semantic Kernel fornece conectores diretos para Azure OpenAI.
+Você configura o AzureOpenAITextCompletion ou AzureOpenAIChatCompletionService, informando:
+ - Nome do deployment
+ - Endpoint da API
+ - Chave de acesso
+ - Nome do modelo
+Ele cuida da chamada e do roteamento dos prompts.
